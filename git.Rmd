@@ -35,8 +35,8 @@ git checkout <哈希值>   #版本退回 进入了不同分支
 git checkout -b <新分支名>    #创建并进入新分支
 git branch    #列出分支
 git clone git@github.com:Liling249/test.git   #克隆远程仓库到本地
-
-
+git restore --staged .    #清空暂存区
+git status    #展示工作目录和暂存区的状态
 
 git pull                              从远程仓库拉取更新  
 git push                            将本地提交推送到远程  
@@ -63,5 +63,12 @@ ssh -T git@github.com
 
 ## 快速git push
 ```{bash}
-alias gp='git add . && git commit -m "update" && git push'
+alias gp='git add . && git commit -m "update" && git push -u origin main'
+```
+
+```{bash}
+清空所有暂存区内容git reset HEAD .
+只取消某个具体文件git reset HEAD 
+文件名只取消某个文件夹git reset HEAD 
+文件夹名/彻底从暂存区移除（推荐）git rm --cached 文件名
 ```
