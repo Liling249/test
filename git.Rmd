@@ -37,9 +37,20 @@ git branch    #列出分支
 git clone git@github.com:Liling249/test.git   #克隆远程仓库到本地
 git restore --staged .    #清空暂存区
 git status    #展示工作目录和暂存区的状态
+git pull    #从远程仓库拉取更新
+git push    #将本地提交推送到远程
 
-git pull                              从远程仓库拉取更新  
-git push                            将本地提交推送到远程  
+git push -u origin main
+          │  │      │
+          │  │      └─ 要推送的本地分支名
+          │  └─ 远程仓库的名字（通常是 origin）
+          └─ 设置上游跟踪（upstream）
+
+
+
+
+
+
 git switch -c <分支>         创建并切换到新分支 
 ```
 
