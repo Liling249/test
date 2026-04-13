@@ -1,0 +1,66 @@
+---
+title: "git"
+output: html_document
+date: "2026-04-11"
+---
+
+地址：https://github.com/Liling249/test.git
+
+test_token: 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
+
+## 官方教程
+```{bash}
+echo "# test" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/Liling249/test.git #链接
+git push -u origin main
+```
+
+```{bash}
+git remote add origin https://github.com/Liling249/test.git
+git branch -M main
+git push -u origin main
+```
+
+## 常用命令
+
+```{bash}
+git init    #初始化本地仓库  
+git add <file>    #添加修改到暂存区  
+git commit -m "msg"   #提交修改并写备注
+git log   #日志
+git checkout <哈希值>   #版本退回 进入了不同分支
+git checkout -b <新分支名>    #创建并进入新分支
+git branch    #列出分支
+
+git clone <url>                 克隆远程仓库到本地  
+git pull                              从远程仓库拉取更新  
+git push                            将本地提交推送到远程  
+git switch -c <分支>         创建并切换到新分支 
+```
+
+## push报错403
+
+```{bash}
+# 生成ssh秘钥
+ssh-keygen -t ed25519 -C "13084073872@163.com"
+ 
+# 修改远程仓库地址为 SSH 方式
+git remote set-url origin git@github.com:Liling249/test.git
+ 
+# githup上添加秘钥
+ 
+# 测试连接
+ssh -T git@github.com
+```
+
+ 看到 Hi Liling249! You've successfully authenticated... 就成功了。
+之后直接 git push -u origin main 即可，无需再输入密码。
+
+## 快速git push
+```{bash}
+alias gp='git add . && git commit -m "update" && git push'
+```
