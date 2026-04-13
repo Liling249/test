@@ -6,7 +6,6 @@ date: "2026-04-11"
 
 地址：https://github.com/Liling249/test.git
 
-test_token: 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
 
 ## 官方教程
 ```{bash}
@@ -35,8 +34,10 @@ git log   #日志
 git checkout <哈希值>   #版本退回 进入了不同分支
 git checkout -b <新分支名>    #创建并进入新分支
 git branch    #列出分支
+git clone git@github.com:Liling249/test.git   #克隆远程仓库到本地
 
-git clone <url>                 克隆远程仓库到本地  
+
+
 git pull                              从远程仓库拉取更新  
 git push                            将本地提交推送到远程  
 git switch -c <分支>         创建并切换到新分支 
